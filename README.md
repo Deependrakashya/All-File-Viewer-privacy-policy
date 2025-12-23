@@ -1,6 +1,6 @@
 # Privacy Policy for All File Viewer
 
-**Last updated:** December 22, 2025
+**Last updated:** December 23, 2025
 
 **All File Viewer** ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our application collects, uses, and safeguards your information.
 
@@ -21,9 +21,16 @@ We use third-party services that may collect information used to identify you. T
 
 To function correctly, **All File Viewer** requires specific permissions:
 
-*   **Storage Access (Read/Write):**
-    *   Required to view, organize, and edit files stored on your device.
-    *   On newer Android versions, we request access to Photos/Videos/Audio or use the system file picker as appropriate.
+*   **Storage Access (All Files Access):**
+    *   **Why We Need This:** All File Viewer is a document management application that scans your entire device storage to automatically discover and organize all your documents (PDFs, Word files, Excel sheets, images, etc.) stored anywhere on your device.
+    *   **What We Access:** We request "All files access" permission (MANAGE_EXTERNAL_STORAGE on Android 11+) to scan directories across your device including Downloads, Documents, app-specific folders, and other locations where documents may be stored.
+    *   **How We Use It:** This permission allows the app to:
+        - Automatically find and catalog all supported document types on your device
+        - Display them in an organized list for easy access
+        - Allow you to view, edit, and manage these documents
+    *   **Your Data Stays Local:** All file scanning and processing happens entirely on your device. We do not upload, transmit, or store your files on any external servers.
+    *   **On Android 12 and below:** We use standard READ_EXTERNAL_STORAGE permission.
+    *   **Alternative Access:** You can also manually select individual files using the system file picker without granting full storage access, though this limits the app's automatic discovery features.
 *   **Camera:**
     *   Required for the "Image to PDF" feature, "OCR (Text Recognition)" feature, and document scanning functionalities.
     *   Images captured are processed locally and are not sent to our servers.
