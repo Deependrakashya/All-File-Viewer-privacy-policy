@@ -23,19 +23,25 @@ To function correctly, **All File Viewer** requires specific permissions:
 
 *   **Storage Access (All Files Access):**
     *   **Why We Need This:** All File Viewer is a document management application that scans your entire device storage to automatically discover and organize all your documents (PDFs, Word files, Excel sheets, images, etc.) stored anywhere on your device.
-    *   **What We Access:** We request "All files access" permission (MANAGE_EXTERNAL_STORAGE on Android 11+) to scan directories across your device including Downloads, Documents, app-specific folders, and other locations where documents may be stored.
+    *   **What We Access:** We request "All files access" permission (MANAGE_EXTERNAL_STORAGE on Android 11+) to scan and read files across your device including Downloads, Documents, app-specific folders, and other locations where documents may be stored.
+    *   **Read-Only Access:** We only READ your files to display them in the app. We do not modify, delete, or move your original files. Any edits you make are saved as new files using the system's file picker (you choose where to save).
     *   **How We Use It:** This permission allows the app to:
-        - Automatically find and catalog all supported document types on your device
+        - Automatically scan and find all supported document types on your device
         - Display them in an organized list for easy access
-        - Allow you to view, edit, and manage these documents
-    *   **Your Data Stays Local:** All file scanning and processing happens entirely on your device. We do not upload, transmit, or store your files on any external servers.
-    *   **On Android 12 and below:** We use standard READ_EXTERNAL_STORAGE permission.
+        - Allow you to view and read these documents
+        - Create new files (PDFs, edited images) which you save using the system file picker
+    *   **Your Data Stays Local:** All file scanning, viewing, and processing happens entirely on your device. We do not upload, transmit, or store your files on any external servers.
+    *   **Version-Specific Permissions:**
+        - **Android 13+**: Uses MANAGE_EXTERNAL_STORAGE for full device access
+        - **Android 11-12**: Uses MANAGE_EXTERNAL_STORAGE + READ_EXTERNAL_STORAGE
+        - **Android 10 and below**: Uses READ_EXTERNAL_STORAGE
     *   **Alternative Access:** You can also manually select individual files using the system file picker without granting full storage access, though this limits the app's automatic discovery features.
 *   **Camera:**
     *   Required for the "Image to PDF" feature, "OCR (Text Recognition)" feature, and document scanning functionalities.
     *   Images captured are processed locally and are not sent to our servers.
 *   **Internet Access:**
-    *   Required solely for displaying advertisements (via Google AdMob) and for basic analytics to improve app performance.
+    *   Required solely for displaying advertisements (via Google AdMob).
+    *   No file data is transmitted over the internet.
 
 ## 3. Third-Party Services
 
